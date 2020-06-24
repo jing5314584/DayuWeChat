@@ -39,6 +39,7 @@
         <text class="text-grey">购买商品</text>
       </view>
     </view>
+    
     <view class="cu-item ">
       	<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="必填|请简要描述您购买的商品" style="padding-top:20rpx" placeholder-style="color:#8799a3;"></textarea>
     </view>
