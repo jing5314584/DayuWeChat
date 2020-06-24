@@ -1,0 +1,45 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">上传凭证</view></cu-custom>
+<view class="cu-list menu {{menuBorder?'sm-border':''}} card-menu margin-top">
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="text-grey">选择商户</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-sm">小目标还没有实现！</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="text-grey">选择门店</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-sm">小目标还没有实现！</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="text-grey">购买时间</text>
+      </view>
+				<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+			   <view class="picker">
+				   <text class="text-grey">	{{date}}</text>
+			    </view>
+	  	</picker>
+    </view>
+    <view class="cu-item margin-top">
+       <view class="content">
+        <text class="text-grey">购买商品</text>
+      </view>
+    </view>
+    <view class="cu-item ">
+      	<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="必填|请简要描述您购买的商品" style="padding-top:20rpx" placeholder-style="color:#8799a3;"></textarea>
+    </view>
+     <view class="cu-item margin-top">
+       <view class="content">
+        <text class="text-grey">购买商品</text>
+      </view>
+    </view>
+    <view class="cu-item ">
+      	<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="必填|请简要描述您购买的商品" style="padding-top:20rpx" placeholder-style="color:#8799a3;"></textarea>
+    </view>
+  </view>

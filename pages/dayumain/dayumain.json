@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "basics": "/pages/index/index",
+    "component": "/pages/productSort/productSort",
+    "plugin": "/pages/buycar/buycar",
+    "about": "/pages/user/user"
+  }
+}
