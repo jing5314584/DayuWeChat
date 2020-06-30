@@ -1,4 +1,3 @@
-
 .bg-transparency {
 	background:linear-gradient(-47deg,rgba(213,171,85,1),rgba(223,207,167,1));
 	color: #000;
@@ -16,12 +15,13 @@
   font-size: 26rpx;
   position:relative;
 }
-.header-lay{	overflow: hidden;display: flex;justify-content: center;}
+.header-lay{	overflow: hidden;}
 .header-lay .item {
 	position: relative;
 	display: flex;
-  margin-left: 80rpx;
+	padding-right: 10rpx;
 	height: 140rpx;
+	justify-content: flex-end;
 	align-items: center
 }
 .header-lay .item .avatar {
@@ -50,7 +50,3 @@
 .item{
   width: 100%;
 }
-
-.user-list-warapper{position: absolute; top:340rpx; left: 50%; width: 710rpx; margin-left: -355rpx;background:linear-gradient(-11deg,rgba(226,220,196,1),rgba(213,170,84,1));
-  box-shadow:0px 8px 29px 0px rgba(106,75,7,0.24);
-  border-radius:10px;}

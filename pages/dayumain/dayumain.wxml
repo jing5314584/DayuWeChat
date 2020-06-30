@@ -2,29 +2,30 @@
 <component wx:if="{{PageCur=='component'}}"></component>
 <plugin wx:if="{{PageCur=='plugin'}}"></plugin>
 <about wx:if="{{PageCur=='about'}}"></about>
-<view class="cu-bar tabbar bg-white shadow foot">
-  <view class="action" bindtap="NavChange" data-cur="basics">
+<view class="cu-bar tabbar  shadow foot {{PageCur=='basics'?'bg-black-20':'bg-white'}} ">
+  <view class="action margin-bottom-sm" bindtap="NavChange" data-cur="basics">
     <view class='cuIcon-cu-image'>
-      <image src="/images/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
+      <image src="/images/index{{PageCur=='basics'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">大鱼塘</view>
+    <view class="{{PageCur=='basics'?'text-white':'text-gray'}}">大鱼塘</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="component">
+  <view class="action margin-bottom-sm" bindtap="NavChange" data-cur="component">
     <view class='cuIcon-cu-image'>
-      <image src="/images/component{{PageCur=='component'?'_cur':''}}.png"></image>
+      <image src="/images/fuli{{PageCur=='component'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='component'?'text-green':'text-gray'}}">福利活动</view>
+    <view class="{{PageCur=='component'?'text-black':'text-gray'}}">福利活动</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="plugin">
+  <view class="action margin-bottom-sm" bindtap="NavChange" data-cur="plugin">
     <view class='cuIcon-cu-image'>
-      <image src="/images/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
+      <image src="/images/fishshop{{PageCur=='plugin'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">鱼币商城</view>
+    <view class="{{PageCur=='plugin'?'text-black':'text-gray'}}">鱼币商城</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="about">
+  <view class="action margin-bottom-sm" bindtap="NavChange" data-cur="about">
     <view class='cuIcon-cu-image'>
-      <image src="/images/about{{PageCur=='about'?'_cur':''}}.png"></image>
+      <image src="/images/user{{PageCur=='about'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">我的</view>
+    <view class="{{PageCur=='about'?'text-black':'text-gray'}}">我的</view>
   </view>
+
 </view>

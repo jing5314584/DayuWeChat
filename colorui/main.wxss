@@ -92,6 +92,9 @@ image {
 .radius {
 	border-radius: 6rpx;
 }
+.radius-12 {
+	border-radius: 12rpx;
+}
 
 /* ==================
           图片
@@ -198,7 +201,7 @@ checkbox::before {
 	color: var(--white) !important;
 	top: 50%;
 	margin-top: -8px;
-	right: 5px;
+	left: 2px;
 	font-size: 32rpx;
 	line-height: 16px;
 	pointer-events: none;
@@ -210,8 +213,8 @@ checkbox::before {
 radio .wx-radio-input,
 checkbox .wx-checkbox-input {
 	margin: 0;
-	width: 24px;
-	height: 24px;
+	width: 18px;
+	height: 18px;
 }
 
 checkbox.round .wx-checkbox-input {
@@ -967,7 +970,11 @@ button.icon.lg {
 	height: 128rpx;
 	font-size: 2.5em;
 }
-
+.cu-avatar.xxl {
+	width: 176rpx;
+	height: 140rpx;
+	font-size: 2.5em;
+}
 .cu-avatar .avatar-text {
 	font-size: 0.4em;
 }
@@ -1271,7 +1278,6 @@ button.icon.lg {
 	display: flex;
 	padding-right: 10rpx;
 	height: 140rpx;
-	background-color: var(--white);
 	justify-content: flex-end;
 	align-items: center
 }
@@ -1288,6 +1294,12 @@ button.icon.lg {
 .cu-list.menu-avatar>.cu-item .content {
 	position: absolute;
 	left: 146rpx;
+	width: calc(100% - 96rpx - 60rpx - 120rpx - 20rpx);
+	line-height: 1.6em;
+}
+.cu-list.menu-avatar>.cu-item .content-l {
+	position: absolute;
+	left: 226rpx;
 	width: calc(100% - 96rpx - 60rpx - 120rpx - 20rpx);
 	line-height: 1.6em;
 }
@@ -1312,7 +1324,7 @@ button.icon.lg {
 
 .cu-list.menu-avatar>.cu-item .action {
 	width: 100rpx;
-	text-align: center
+	text-align:center
 }
 
 .cu-list.menu-avatar>.cu-item .action view+view {
@@ -3933,9 +3945,15 @@ scroll-view.cu-steps .cu-item {
 .lines-black {
 	color: var(--black);
 }
-
+.text-black-m{
+	color:#000;
+}
 .text-white,
 .line-white,
 .lines-white {
 	color: var(--white);
+}
+.bg-title-bar{
+	background-color: white;
+	box-shadow:0px 8px 29px 0px rgba(106,75,7,0.24);
 }

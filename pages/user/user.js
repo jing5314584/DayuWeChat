@@ -13,7 +13,8 @@ Page({
   coupon:'',
   collect:'',
   hasUserInfo: false,
-  showModal:false
+  showModal:false,
+  barheight:app.globalData.CustomBar,
   },
 
   setTouchMove: function (e) {
@@ -116,6 +117,26 @@ Page({
         }
       })
      
+  },
+  gotoUserInfo:function(){
+    wx.navigateTo({
+      url: '/pages/userpages/userinfo/userinfo',
+    })
+  },
+  gotuRecord:function(){
+    wx.navigateTo({
+      url: '/pages/userpages/record/record',
+    })
+  },
+  gotuVoucher:function(){
+    wx.navigateTo({
+      url: '/pages/userpages/voucher/voucher',
+    })
+  },
+  gotuAddress:function(){
+    wx.navigateTo({
+      url: '/pages/address/address',
+    })
   },
   goNotification:function(){
       wx.navigateTo({

@@ -5,6 +5,7 @@
 
 .scrollPage {
   height: 100vh;
+  -webkit-overflow-scrolling : touch;
 }
 
 .nav-list {

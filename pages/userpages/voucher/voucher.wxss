@@ -1,0 +1,10 @@
+/* pages/userpages/voucher/voucher.wxss */
+.state {
+  margin-top: 45rpx;
+	font-size: 22rpx;
+	padding: 6rpx 12rpx;
+  height: 42rpx;
+  border-radius: 21rpx;
+  background:linear-gradient(-47deg,rgba(213,171,85,1),rgba(223,207,167,1));
+  color: white;
+}

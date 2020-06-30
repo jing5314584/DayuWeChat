@@ -1,14 +1,14 @@
   <view class="xuanfu">
-    <button class="cu-btn bg-purple round lg shadow" bindtap="gotoUploadvoucher" >上传凭证</button>
+  	<button class="cu-btn bg-purple round lg shadow subimit" bindtap="gotoUploadvoucher">上传凭证</button>
   </view>
- <scroll-view scroll-y class="scrollPage">
-  <image src='/images/componentBg.png' mode='widthFix' class='response'></image>
-  <view class='nav-list'>
-    <navigator hover-class='none' class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
-      <view class="nav-title">{{item.title}}</view>
-      <view class="nav-name">{{item.name}}</view>
-      <text class='cuIcon-{{item.icon}}'></text>
-    </navigator>
+  <image class="backageground" src="{{url}}guomei.png"></image>
+  <view class="log">
+  	<image src="{{url}}guomei_log.png" style="height:300rpx"></image>
   </view>
-  <view class='cu-tabbar-height'></view>
-</scroll-view> 
+  <view class="shop-ul">
+  	<view style="padding:12rpx">
+  		<image src="{{url}}guomei_text_bg.png" style="width:170rpx;height:66rpx;margin-left:12rpx">国美电器</image>
+  		<image src="{{url}}guomei_text_bg.png" style="width:170rpx;height:66rpx;margin-left:12rpx"></image>
+  		<image src="{{url}}guomei_text_bg.png" style="width:170rpx;height:66rpx;margin-left:12rpx"></image>
+  	</view>
+  </view>

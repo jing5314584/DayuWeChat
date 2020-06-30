@@ -1,1 +1,11 @@
 /* pages/dayumain/dayumain.wxss */
+.bg-white-0 {
+	background-color: rgba(0, 0, 0, 0);
+	color: rgba(0, 0, 0, 0);
+}
+.text-black{
+	color: black;
+}
+.bg-black-20{
+	background-color: rgba(0, 0, 0, 0.7);
+}

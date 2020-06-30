@@ -1,7 +1,4 @@
-.bg-gradual-pink {
-  background:rgba(255,255,255,1);
-  box-shadow:0px 3px 16px 0px rgba(208,208,208,0.29);
-}
+/* pages/userpages/record/record.wxss */
 .item-title{
   margin-top: 20rpx;
 }
@@ -10,8 +7,8 @@
   padding-top: 4rpx;
   padding-right: 12rpx;
   padding-bottom: 4rpx;
-  background:linear-gradient(-47deg,rgba(255,110,2,1),rgba(252,176,134,1));
-  border-radius:5px;
+  background:linear-gradient(-47deg,rgba(213,171,85,1),rgba(223,207,167,1));
+  border-radius:10px;
   color: white;
 }
 

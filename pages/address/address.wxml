@@ -1,26 +1,35 @@
-<view class="header"></view>
+<cu-custom bgColor="bg-title-bar" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">收货地址</view>
+</cu-custom>
 <view class='address_ul'>
-    <block wx:for="{{addressArray}}">
-        <view class='address_li'>
-             <view class='addressx' data-id="{{item.id}}" bindtap='goOrder'>
-                  <view class='addressName'>收货人：{{item.real_name}}<text class='addressphone'>{{item.phone}}</text></view>
-                 <view class='addressLock'>收货地址：{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
-            </view>
-            <view class='addressc flex'>
-               <view data-idx='{{item.id}}' class='Maddress' bindtap='activetap' >
-                     <text class='iconfont icon-duihao1 Choice {{_num==item.id?"active":""}}' data-idx='{{item.id}}'></text>
-                     设为默认地址
-              </view>
-               <view>
-               <text class='edit' data-id="{{item.id}}" bindtap='editAddress'>编辑</text>
-                <text class='del' data-id="{{item.id}}" bindtap='delAddress'>删除</text>
-               </view> 
-            </view> 
-        </view>
-    </block>
+	<block wx:for="{{addressArray}}" wx:key="index">
+		<view class='address_li'>
+			<view class='addressx' data-id="{{item.id}}" bindtap='goOrder'>
+				<view class='addressName'>{{item.real_name}}<text class='addressphone'>{{item.phone}}</text>
+					<view class="cu-tag line-orange margin-left sm" wx:if="{{item.isDefault}}">默认</view>
+				</view>
+				<view class='addressLock text-gray'>{{item.province}}{{item.city}}{{item.district}}{{item.detail}}
+					<image class='edit' src="/images/edit.png" style="width:32rpx;height:32rpx;right:10rpx"></image>
+					<image class='del' src="/images/delete.png" style="width:34rpx;height:34rpx;right:10rpx"></image>
+				</view>
+				<view class='addressLock text-gray'>{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
+			</view>
+			<view class='addressc flex'>
+				<view data-idx='{{item.id}}' class='Maddress' bindtap='activetap'>
+					<checkbox class="round red sm" checked='{{item.isDefault}}'></checkbox>
+					设为默认地址
+				</view>
+				<view>
+					<text class='edit' data-id="{{item.id}}" bindtap='editAddress'>编辑</text>
+					<text class='del' data-id="{{item.id}}" bindtap='delAddress'>删除</text>
+				</view>
+			</view>
+		</view>
+	</block>
 </view>
 <view style='height:80rpx'></view>
 <view class='footer'>
-  <view class='system-address' bindtap='addAddress'>新增地址</view>
-  <view class='weixin-address' bindtap='getWxAddress'>微信地址</view>
+	<view class='system-address' bindtap='addAddress'>新增地址</view>
+	<view class='weixin-address' bindtap='getWxAddress'>微信地址</view>
 </view>

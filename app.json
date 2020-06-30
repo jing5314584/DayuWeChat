@@ -27,7 +27,7 @@
     "pages/orders-list/orders-list",
     "pages/comment/comment",
     "pages/foo-tan/foo-tan",
-    "pages/buycar/buycar",
+    "pages/fishshop/fishshop",
     "pages/user/user",
     "pages/integral-con/integral-con",
     "pages/orders-con/orders-con",
@@ -43,8 +43,10 @@
     "pages/main/main",
     "pages/collect/collect",
     "pages/promotion-card/promotion-card",
-    "pages/uploadvoucher/uploadvoucher"
- 
+    "pages/uploadvoucher/uploadvoucher",
+    "pages/userpages/userinfo/userinfo",
+    "pages/userpages/record/record",
+    "pages/userpages/voucher/voucher"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

@@ -1,0 +1,2 @@
+<!--pages/userpages/userinfo/userinfo.wxml-->
+<cu-custom bgColor="#fff" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">个人信息</view></cu-custom>

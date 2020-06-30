@@ -1,84 +1,104 @@
- <scroll-view scroll-y class="scrollPage">
-  <image src='/images/componentBg.png' mode='widthFix' class='response'></image>
-<view class="cu-card case ">
-  <view class="cu-item shadow">
-    <view class="image">
-      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-      <view class="cu-tag bg-blue">史诗</view>
-      <view class="cu-bar bg-shadeBottom">
-        <text class="text-cut">我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。</text>
-      </view>
-    </view>
-    <view class="cu-list menu-avatar">
+ <cu-custom bgColor="bg-gradual-pink">
+ 	<view slot="content" style="color:#000000">福利活动</view>
+ </cu-custom>
+ <view style="height:45rpx"></view>
+ <view class="item-time-lable text-grey">2020-02-28 11:03</view>
+ <view class="cu-card dynamic">
+ 	<view class="cu-item shadow">
+ 		<!-- <view class="cu-list menu-avatar">
       <view class="cu-item">
         <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
         <view class="content flex-sub">
-          <view class="text-grey">正义天使 凯尔</view>
+          <view>凯尔</view>
           <view class="text-gray text-sm flex justify-between">
-            十天前
-            <view class="text-gray text-sm">
-              <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-              <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-              <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-            </view>
+            2019年12月3日
           </view>
         </view>
       </view>
-    </view>
-  </view>
-</view>
-<view class="cu-card case ">
-  <view class="cu-item shadow">
-    <view class="image">
-      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-      <view class="cu-tag bg-blue">史诗</view>
-      <view class="cu-bar bg-shadeBottom">
-        <text class="text-cut">我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。</text>
-      </view>
-    </view>
-    <view class="cu-list menu-avatar">
+    </view> -->
+ 		<view class="text-content item-title text-bold">
+ 			2020,你最想得到的奖励是什么？
+ 		</view>
+ 		<view class="grid flex-sub padding-lr">
+ 			<image class="bg-img only-img" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
+ 		</view>
+ 		<view class="line"> </view>
+ 		<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}} ">
+ 			<view class="cu-item arrow">
+ 				<view class="action">
+ 					<view class="item-tag">进行中</view>
+ 				</view>
+ 				<view class="action">
+ 					<text class="text-grey text-sm">立即查看</text>
+ 				</view>
+ 			</view>
+ 		</view>
+ 	</view>
+ </view>
+ <view class="item-time-lable text-grey">2020-02-28 11:03</view>
+ <view class="cu-card dynamic">
+ 	<view class="cu-item shadow">
+ 		<!-- <view class="cu-list menu-avatar">
       <view class="cu-item">
         <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
         <view class="content flex-sub">
-          <view class="text-grey">正义天使 凯尔</view>
+          <view>凯尔</view>
           <view class="text-gray text-sm flex justify-between">
-            十天前
-            <view class="text-gray text-sm">
-              <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-              <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-              <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-            </view>
+            2019年12月3日
           </view>
         </view>
       </view>
-    </view>
-  </view>
-</view>
-<view class="cu-card case ">
-  <view class="cu-item shadow">
-    <view class="image">
-      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-      <view class="cu-tag bg-blue">史诗</view>
-      <view class="cu-bar bg-shadeBottom">
-        <text class="text-cut">我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。</text>
-      </view>
-    </view>
-    <view class="cu-list menu-avatar">
+    </view> -->
+ 		<view class="text-content item-title text-bold">
+ 			2020,你最想得到的奖励是什么？
+ 		</view>
+ 		<view class="grid flex-sub padding-lr">
+ 			<image class="bg-img only-img" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
+ 		</view>
+ 		<view class="line"> </view>
+ 		<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}} ">
+ 			<view class="cu-item arrow">
+ 				<view class="action">
+ 					<view class="item-tag">进行中</view>
+ 				</view>
+ 				<view class="action">
+ 					<text class="text-grey text-sm">立即查看</text>
+ 				</view>
+ 			</view>
+ 		</view>
+ 	</view>
+ </view>
+ <view class="item-time-lable text-grey">2020-02-28 11:03</view>
+ <view class="cu-card dynamic">
+ 	<view class="cu-item shadow">
+ 		<!-- <view class="cu-list menu-avatar">
       <view class="cu-item">
         <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
         <view class="content flex-sub">
-          <view class="text-grey">正义天使 凯尔</view>
+          <view>凯尔</view>
           <view class="text-gray text-sm flex justify-between">
-            十天前
-            <view class="text-gray text-sm">
-              <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-              <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-              <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-            </view>
+            2019年12月3日
           </view>
         </view>
       </view>
-    </view>
-  </view>
-</view>
-</scroll-view>
+    </view> -->
+ 		<view class="text-content item-title text-bold">
+ 			2020,你最想得到的奖励是什么？
+ 		</view>
+ 		<view class="grid flex-sub padding-lr">
+ 			<image class="bg-img only-img" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
+ 		</view>
+ 		<view class="line"> </view>
+ 		<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}} ">
+ 			<view class="cu-item arrow">
+ 				<view class="action">
+ 					<view class="item-tag">进行中</view>
+ 				</view>
+ 				<view class="action">
+ 					<text class="text-grey text-sm">立即查看</text>
+ 				</view>
+ 			</view>
+ 		</view>
+ 	</view>
+ </view>
+ <view class="cu-tabbar-height"></view>

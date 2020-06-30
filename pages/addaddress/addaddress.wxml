@@ -1,3 +1,7 @@
+<cu-custom bgColor="#fff" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">新增地址</view>
+</cu-custom>
 <form bindsubmit="formSubmit">
         <view class='information'>
             <view class='information-li flex'><label>姓名</label><input type='text' placeholder='请输入姓名' placeholder-class='placeholder' name="name" value='{{userAddress.real_name}}'/></view>
@@ -12,9 +16,9 @@
             <view class='information-li flex'><label>详细地址</label><input type='text' placeholder-class='placeholder' placeholder='请填写具体地址' name="fulladdress" value='{{userAddress.detail}}'></input></view>
         </view>
         <view class='default' bindtap='defaulttap'>
-            <text class='iconfont icon-duihao1 duihao {{_num==0?"active":""}}'></text>
+           <checkbox class="round red sm" checked></checkbox>
             设置为默认地址
         </view>
-      <button class='but' formType="submit">立即保存</button>
+      <button class='but' formType="submit" style="background:linear-gradient(-47deg,rgba(213,171,85,1),rgba(223,207,167,1));color:#000">立即保存</button>
 </form>
     

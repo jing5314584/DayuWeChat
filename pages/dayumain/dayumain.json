@@ -2,7 +2,7 @@
   "usingComponents": {
     "basics": "/pages/index/index",
     "component": "/pages/productSort/productSort",
-    "plugin": "/pages/buycar/buycar",
+    "plugin": "/pages/fishshop/fishshop",
     "about": "/pages/user/user"
   }
 }

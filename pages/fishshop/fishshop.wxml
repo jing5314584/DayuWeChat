@@ -1,0 +1,46 @@
+<view class='header '>
+	<view class="header-lay" style="padding-top:{{barheight+12}}px;">
+		<view class="item">
+			<image class="avatar round lg" mode='scaleToFill' src="https://thirdwx.qlogo.cn/mmopen/vi_32/4kET70zdREC6zl4ro9YYZasEqfibN5tVpEOAgeA6dNUoWVib1SEAd3LlicptiblQkFXPB36aMCC2ichTtgNiaU67xA2w/132"></image>
+			<view class="content">
+				<view class="text-grey" style="	font-size: 24px;color: rgba(117, 84, 15, 1);">超污||小萌神</view>
+				<view class="text-gray text-sm flex ">
+					<text class="text-cut margin-top-sm " style="	font-size: 18px;color: rgba(117, 84, 15, 1);">鱼币  88,888.82</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="grid col-4 padding-xs">
+	<view class="margin-tb-sm text-center">
+		<button class="cu-btn round line-grey shadow" style="background:linear-gradient(-47deg,rgba(213,171,85,1),rgba(223,207,167,1));">全部</button>
+	</view>
+	<view class="margin-tb-sm text-center">
+		<button class="cu-btn round line-grey shadow">1-100</button>
+	</view>
+	<view class="margin-tb-sm text-center">
+		<button class="cu-btn round line-grey shadow">101-500</button>
+	</view>
+	<view class="margin-tb-sm text-center">
+		<button class="cu-btn round line-grey shadow">500以上</button>
+	</view>
+</view>
+<view class="bg-white padding">
+<!--	<view class="grid col-2 grid-square">
+		<block wx:for="{{8}}" wx:key='index'>
+			<view class="content-list">
+				<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg" mode="aspectFill" ></image>
+				<text>境内机场贵宾厅{{index+1}}</text>
+				<text>2600鱼币</text>
+			</view>
+		</block>
+	</view>-->
+  <view class="grid flex-sub col-2 no-border ">
+    <view wx:for="{{iconList}}" wx:key='index' class="padding-left-sm padding-right-sm " >
+      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg" style="height:123px;border-radius:10px;" mode="aspectFill" ></image>
+      <view class="margin-left-xs margin-top-xs">考拉卡会员</view>
+      <view class="margin-left-xs margin-top-xs margin-bottom" style="color:rgba(255, 89, 7, 1)">20鱼币</view>
+    </view>
+  </view> 
+</view>
+<view class='cu-tabbar-height'></view>

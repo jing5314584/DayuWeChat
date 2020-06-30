@@ -8,7 +8,7 @@ Page({
     userinfo:{},
     sign_day_num: [],
     sign_index:0,
-    sign_count:[],
+    sign_count:[0,0,1,2],
     day:'',
     sign_list:[],
     where:{
@@ -66,6 +66,10 @@ Page({
   },
   sign:function(){
     var that = this;
+    that.setData({
+      sign_index: (that.data.sign_index + 1) > that.data.sign_day_num.length ? 1 : that.data.sign_index + 1,
+      sign_count: that.prefixInteger(113, 4).split(''),
+    });
     app.baseGet(app.U({ a: 'user_sign' }), function (res) {
       var userinfo=that.data.userinfo;
       userinfo.is_sign=true;

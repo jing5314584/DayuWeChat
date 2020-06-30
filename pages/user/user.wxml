@@ -1,168 +1,73 @@
-<view class='header flex'>
-  <view class='system-notification iconfont icon-pinglun' bindtap='goNotification'><text class="system-notification-text" wx:if="{{userinfo.notice > 0}}">{{userinfo.notice}}</text></view>
-  
-  <image src='{{userinfo.avatarUrl}}' class='avatar'></image>
-  <view class='name'>{{userInfo.nickname}}</view>
-  <button class='getPhoneNumber' wx:if="{{!userinfo.phone}}"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号</button> 
-  <!-- <text wx:if="{{userinfo.level==0}}">[普通用户]</text> -->
-  <view class='notice'>
-    <view class='iconfont '></view>
-  </view>
+ <scroll-view scroll-y class="scrollPage bg-white">
+<view class='header '>
+	<view class="header-lay" style="padding-top:{{barheight+12}}px;">
+		<view class="item" bindtap="gotoUserInfo">
+			<image class="avatar round lg" mode='scaleToFill' src="https://thirdwx.qlogo.cn/mmopen/vi_32/4kET70zdREC6zl4ro9YYZasEqfibN5tVpEOAgeA6dNUoWVib1SEAd3LlicptiblQkFXPB36aMCC2ichTtgNiaU67xA2w/132"></image>
+			<view class="content ">
+				<view class="justify-between flex">
+					<view class="text-grey" style="	font-size: 24px;color: #fff;">超污||小萌神</view>
+					<text class="cuIcon-right" style="color:#fff;font-size: 42rpx;right:142rpx"></text>
+				</view>
+				<view class="text-gray text-sm flex ">
+					<text class="text-cut margin-top-sm " style="	font-size: 18px;color: rgba(117, 84, 15, 1);">大鱼ID  88888888</text>
+				</view>
+			</view>
+		</view>
+	</view>
 </view>
-<view class='user-list-warapper'>
-   <view class='item-box amount flex'>
-    <view class='amount-item' bindtap='money'>
-      <view class='count'>{{userinfo.now_money}}</view>
-      <view class='text' >账户余额</view>
-    </view>
-    <view class='amount-item' bindtap='integral'>
-      <view class='count'>{{userinfo.integral}}</view>
-      <view class='text' >我的积分</view>
-    </view>
-    <view class='amount-item' bindtap='coupons'>
-      <view class='count'>{{userinfo.couponCount ? userinfo.couponCount : 0}}</view>
-      <view class='text' >优惠券</view>
-    </view>
-    <view class='amount-item' bindtap='collects'>
-      <view class='count'>{{userinfo.like ? userinfo.like : 0}}</view>
-      <view class='text' >收藏商品</view>
-    </view>
-  </view>
-  <view class='item-box orders'>
-    <view class='title-bar flex'>
-      <text>我的订单</text>
-      <navigator hover-class="none" url='/pages/orders-list/orders-list'>查看全部订单</navigator>
-    </view>
-    <view class='list-wrapper flex'>
-      <view class='item'>
-        <navigator hover-class="none" url='/pages/orders-list/orders-list?nowstatus=1'>
-          <view class='item-span' wx:if="{{orderStatusNum.noBuy}}">{{orderStatusNum.noBuy}}</view>
-          <image src='/images/dfk.png'></image>
-          <view class='text'>待付款</view>
-        </navigator>
-      </view>
-      <view class='item'>
-        <navigator hover-class="none" url='/pages/orders-list/orders-list?nowstatus=3'>
-          <view class='item-span'  wx:if="{{orderStatusNum.noTake}}">{{orderStatusNum.noTake}}</view>
-          <image src='/images/dsh.png'></image>
-          <view class='text'>待收货</view>
-        </navigator>
-      </view>
-      <view class='item'>
-        <navigator hover-class="none" url='/pages/orders-list/orders-list?nowstatus=4'>
-          <view class='item-span' wx:if="{{orderStatusNum.noReply}}">{{orderStatusNum.noReply}}</view>
-          <image src='/images/dpj.png'></image>
-          <view class='text'>待评价</view>
-        </navigator>
-      </view>
-      <view class='item'>
-        <navigator hover-class="none" url='/pages/refund-order/refund-order'>
-        <view class='item-span' wx:if="{{orderStatusNum.noRefund}}">{{orderStatusNum.noRefund}}</view>
-          <image src='/images/dfh.png'></image>
-          <view class='text'>退款/售后</view>
-        </navigator>
-      </view>
-    </view>
-  </view>
-  <view class='item-box service'>
-    <view class='title-bar flex'>
-      <text>我的服务</text>
-    </view>
-    <view class='list-wrapper flex'>
-      <view class='item' bindtap='cut_down_the_price'>
-        <navigator hover-class="none" url="/pages/mycut/mycut">
-          <view class='iconfont icon-chongzhi'></view>
-          <view class='text'>我的砍价</view>
-        </navigator>
-      </view>
-      <view class='item' bindtap='extension' wx:if="{{userinfo.is_promoter && userinfo.statu == 1}}">
-        <navigator hover-class="none">
-          <view class='iconfont icon-wodetuiguangren'></view>
-          <view class='text'>我推广的人</view>
-        </navigator>
-      </view>
-      <view class='item' bindtap='extension' wx:elif="{{userinfo.statu == 2}}">
-        <navigator hover-class="none">
-          <view class='iconfont icon-wodetuiguangren'></view>
-          <view class='text'>我推广的人</view>
-        </navigator>
-      </view>
-      <view class='item' bindtap='myextension' wx:if="{{userinfo.is_promoter && userinfo.statu == 1}}">
-        <navigator hover-class="none">
-          <view class='iconfont icon-tongzhi'></view>
-          <view class='text'>我的推广</view>
-        </navigator>
-      </view>
-      <view class='item' bindtap='myextension' wx:elif="{{userinfo.statu == 2}}">
-        <navigator hover-class="none">
-          <view class='iconfont icon-tongzhi'></view>
-          <view class='text'>我的推广</view>
-        </navigator>
-      </view>
-      <view class='item' wx:if="{{userinfo.is_promoter || userinfo.statu==2}}">
-        <navigator hover-class="none" url="/pages/promotion-card/promotion-card">
-          <view class='iconfont icon-erweima1 icon-er'></view>
-          <view class='text'>推广二维码</view>
-        </navigator>
-      </view>
-
-      <view class='item' bindtap='collects'>
-        <navigator hover-class="none">
-          <view class='iconfont icon-collect'></view>
-          <view class='text'>我的收藏</view>
-        </navigator>
-      </view>
-      <view class='item' bindtap='coupons'>
-        <navigator hover-class="none">
-          <view class='iconfont icon-youhuijuan'></view>
-          <view class='text'>优惠劵</view>
-        </navigator>
-      </view>
-
-      <view class='item'>
-        <navigator hover-class="none" url="/pages/address/address">
-          <view class='iconfont icon-dizhiguanli'></view>
-          <view class='text'>地址管理</view>
-        </navigator>
-      </view>
-      <view class='item'>
-        <navigator hover-class="none" url="/pages/sign/sign">
-          <view class='user-sign'></view>
-          <view class='text'>我要签到</view>
-        </navigator>
-      </view>
-    </view>
-  </view>
-  <view class='item-box orders'>
-    <view class='title-bar flex'>
-      <text>帮助中心</text>
-    </view>
-    <view class='list-wrapper flex'>
-      <!-- <view class='item'>
-        <navigator hover-class="none">
-          <view class='iconfont icon-liaotian'></view>
-          <view class='text'>聊天记录</view>
-        </navigator>
-      </view> -->
-      <view class='item'>
-        <button open-type="contact" class='contact-but'>
-          <view class='iconfont icon-custom-service'></view>
-          <view class='text'>联系客服</view>
-        </button >
-      </view>
-     
-    </view>
-  </view>
+<view class="user-list-warapper">
+	<view class="cu-list menu sm-border" style="background:rgba(0,0,0,0)">
+		<view class="cu-item arrow" style="background:rgba(0,0,0,0)">
+			<view class="content">
+				<text style="color:rgba(117, 84, 15, 1)">累计获得鱼币</text>
+			</view>
+			<view class="action">
+				<text style="color:rgba(117, 84, 15, 1)">8888</text>
+			</view>
+		</view>
+		<view class="cu-item arrow " style="background:rgba(0,0,0,0)">
+			<view class="content">
+				<text style="color:rgba(117, 84, 15, 1)">今日获得鱼币 300</text>
+			</view>
+			<view class="action">
+				<text style="color:rgba(117, 84, 15, 1)">今日消耗鱼币 10</text>
+			</view>
+		</view>
+	</view>
 </view>
-<view class="warrant" wx:if="{{showModal}}">
-     <view class='white'>
-        <view class='pictrue'></view>
-        <view class='tip'>您的信息和数据将受到保护</view>
-        <button class='but' type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">授权并登录</button> 
-     </view>
-     <view class='mask'></view>
+<view class="bg-white" style="top:0rpx">
+<view class="cu-list menu sm-border bg-white" style="padding-top:180rpx;">
+	<view class="cu-item arrow" style="">
+		<view class="content">
+      <image src="/images/like_on_icon.png" style="width:46rpx;height:42rpx;margin-top:-5rpx" ></image>
+			<text style="color:rgba(0, 0, 0, 1);margin-left:15rpx">推荐给好友</text>
+		</view>
+	</view>
+	<view class="cu-item arrow " style="" bindtap="gotuRecord">
+		<view class="content">
+		 <image src="/images/record.png" style="width:46rpx;height:42rpx;margin-top:-5rpx" ></image>
+			<text style="color:rgba(0, 0, 0, 1);margin-left:15rpx">兑换记录</text>
+		</view>
+	</view>
+	<view class="cu-item arrow " style="" bindtap="gotuVoucher">
+		<view class="content">
+		<image src="/images/voucher.png" style="width:46rpx;height:42rpx;margin-top:-5rpx" ></image>
+			<text style="color:rgba(0, 0, 0, 1);margin-left:15rpx">我的凭证</text>
+		</view>
+	</view>
+	<view class="cu-item arrow " style="" bindtap="gotuAddress">
+		<view class="content">
+			<image src="/images/address.png" style="width:46rpx;height:42rpx;margin-top:-5rpx" ></image>
+			<text style="color:rgba(0, 0, 0, 1);margin-left:15rpx">收货地址</text>
+		</view>
+	</view>
+	<view class="cu-item arrow " style="">
+		<view class="content">
+				<image src="/images/feedback.png" style="width:46rpx;height:42rpx;margin-top:-5rpx" ></image>
+			<text style="color:rgba(0, 0, 0, 1);margin-left:15rpx">意见反馈</text>
+		</view>
+	</view>
 </view>
-
-
-
-
+</view>
+<view class='cu-tabbar-height'></view>
+</scroll-view> 
